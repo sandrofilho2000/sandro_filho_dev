@@ -1208,6 +1208,9 @@ footer span a:hover {
 }
 
 @media (max-width: 500px) {
+  .navbar {
+    height: 70px;
+  }
   .navbar .logo a{
     font-size: 22px;
   }
