@@ -689,7 +689,7 @@ aside .themes-wrapper .theme i{
 }
 
 .skills .skills-content .card img{
-  max-width: 80%;
+  max-width: 200px;
   height: 100%;
   opacity: 0;
   transform: translateY(100%);
