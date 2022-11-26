@@ -1,7 +1,6 @@
 from convertImg import *
 from editHtml import *
 
-
 def init_optimize():
     while True:
 
@@ -40,6 +39,5 @@ def init_optimize():
             continue
 
     print("Volte sempre!")
-
 
 init_optimize()

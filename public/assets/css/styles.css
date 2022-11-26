@@ -14,6 +14,11 @@ html {
   overflow-x: hidden;
 }
 
+img{
+  height: auto;
+  max-width: 100%;
+}
+
 .js-tilt-glare{
   border-radius: 6px
 }
@@ -319,7 +324,7 @@ aside .themes-wrapper .theme.light{
 
 aside .themes-wrapper .theme i{
   color: var(--txt-color);
-  font-size: 22px;
+  font-size: 20px;
 }
 
 /* navbar styling */
