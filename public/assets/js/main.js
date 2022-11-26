@@ -134,7 +134,7 @@ $(document).ready(function(){
     if(currColor){
         $("body").attr("theme-color", `theme-color-${currColor}`)
     }else{
-        $("body").attr("theme-color", `theme-color-orange`)
+        $("body").attr("theme-color", `theme-color-blue`)
     }
 
     document.querySelectorAll(".theme-color-menu .colors-list li").forEach(function(item){
