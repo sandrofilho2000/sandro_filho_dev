@@ -484,6 +484,10 @@ aside .themes-wrapper .theme i{
   background-image: url("../images/banner-dark-crimson.jpg");
 }
 
+[theme-mode=theme-mode-light][theme-color=theme-color-crimson] .home::before {
+  background-image: url("../images/banner-light-crimson.jpg");
+}
+
 [theme-mode=theme-mode-light][theme-color=theme-color-green] .home::before {
   background-image: url("../images/banner-light-green.jpg");
 }
