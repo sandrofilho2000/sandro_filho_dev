@@ -79,9 +79,6 @@ $(document).ready(function(){
         $( ".navigation" ).css('cursor', '-moz-grabbing')
     });
 
-
-
-
     $('form').submit(function(e){
         var name = document.querySelector('input[name=nome]')
         var email = document.querySelector('input[name=email]')
@@ -94,4 +91,55 @@ $(document).ready(function(){
         alert('Mensagem Enviada!')
 
     });
+
+
+    $(".theme-color-menu .closeMenu, .navbar i").click(function(e){
+        $(".theme-color-menu").toggleClass("active")
+    })
+
+    $(".theme-color-menu li").click(function(e){
+        var target = $(this).context
+        var color = target.getAttribute("class")
+
+        $("body").attr("theme-color", `theme-color-${color.trim()}`)
+        localStorage.setItem("theme-color", color)
+
+        $(".theme-color-menu li").removeClass("active")
+        target.classList.add("active")
+    })
+
+    var currTheme = localStorage.getItem("theme-mode")
+    if(currTheme){
+        $("body").attr("theme-mode", `theme-mode-${currTheme}`)
+    }else{
+        $("body").attr("theme-mode", `theme-mode-light`)
+    }
+
+    $(".theme-color-menu .themes-toggle").click(function(e){
+        var target = $(this).context
+        var currTheme = $("body").attr("theme-mode")
+
+        if(currTheme === "theme-mode-light"){
+            $("body").attr("theme-mode", "theme-mode-dark")
+            target.setAttribute("theme-mode", "dark")
+            localStorage.setItem("theme-mode", "dark")
+        }else{
+            $("body").attr("theme-mode", "theme-mode-light")
+            target.setAttribute("theme-mode", "light")
+            localStorage.setItem("theme-mode", "light")
+        }
+    })
+
+    var currColor = localStorage.getItem("theme-color")
+    if(currColor){
+        $("body").attr("theme-color", `theme-color-${currColor}`)
+    }else{
+        $("body").attr("theme-color", `theme-color-blue`)
+    }
+
+    document.querySelectorAll(".theme-color-menu .colors-list li").forEach(function(item){
+        if(item.classList.contains(currColor)){
+            item.classList.add("active")
+        }
+    })
 });
