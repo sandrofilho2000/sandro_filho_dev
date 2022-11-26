@@ -21,6 +21,8 @@
     --second-color-blue: #62b4ff;
     --main-color-red: #fb0b12;
     --second-color-red: #ff4a6b;
+    --main-color-crimson: #dc143c;
+    --second-color-crimson: ;
     --main-color-cyan: #10d4d2;
     --second-color-cyan: #2ae9e6;
     --main-color-green: #20b042;
@@ -59,6 +61,11 @@
 [theme-color=theme-color-red] {
     --main-color: var(--main-color-red);
     --second-color: var(--second-color-red);
+}
+
+[theme-color=theme-color-crimson] {
+    --main-color: var(--main-color-crimson);
+    --second-color: var(--second-color-crimson);
 }
 
 [theme-color=theme-color-cyan] {
