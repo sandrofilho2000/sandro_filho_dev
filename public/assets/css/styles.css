@@ -446,51 +446,51 @@ aside .themes-wrapper .theme i{
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-red] .home::before {
-  background-image: url("../images/banner-dark-red.jpg");
+  background-image: url("../images/banner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-red] .home::before {
-  background-image: url("../images/banner-light-red.jpg");
+  background-image: url("../images/banner-light-red.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-blue] .home::before {
-  background-image: url("../images/banner-dark-blue.jpg");
+  background-image: url("../images/banner-dark-blue.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-blue] .home::before {
-  background-image: url("../images/banner-light-blue.jpg");
+  background-image: url("../images/banner-light-blue.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-cyan] .home::before {
-  background-image: url("../images/banner-dark-cyan.jpg");
+  background-image: url("../images/banner-dark-cyan.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-cyan] .home::before {
-  background-image: url("../images/banner-light-cyan.jpg");
+  background-image: url("../images/banner-light-cyan.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-orange] .home::before {
-  background-image: url("../images/banner-dark-orange.jpg");
+  background-image: url("../images/banner-dark-orange.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-orange] .home::before {
-  background-image: url("../images/banner-light-orange.jpg");
+  background-image: url("../images/banner-light-orange.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-green] .home::before {
-  background-image: url("../images/banner-dark-green.jpg");
+  background-image: url("../images/banner-dark-green.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-crimson] .home::before {
-  background-image: url("../images/banner-dark-crimson.jpg");
+  background-image: url("../images/banner-dark-crimson.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-crimson] .home::before {
-  background-image: url("../images/banner-light-crimson.jpg");
+  background-image: url("../images/banner-light-crimson.wbanner-dark-red.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-green] .home::before {
-  background-image: url("../images/banner-light-green.jpg");
+  background-image: url("../images/banner-light-green.wbanner-dark-red.webp");
 }
 
 .home .max-width {
