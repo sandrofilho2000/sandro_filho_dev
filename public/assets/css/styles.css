@@ -450,47 +450,47 @@ aside .themes-wrapper .theme i{
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-red] .home::before {
-  background-image: url("../images/banner-light-red.wbanner-dark-red.webp");
+  background-image: url("../images/banner-light-red.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-blue] .home::before {
-  background-image: url("../images/banner-dark-blue.wbanner-dark-red.webp");
+  background-image: url("../images/banner-dark-blue.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-blue] .home::before {
-  background-image: url("../images/banner-light-blue.wbanner-dark-red.webp");
+  background-image: url("../images/banner-light-blue.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-cyan] .home::before {
-  background-image: url("../images/banner-dark-cyan.wbanner-dark-red.webp");
+  background-image: url("../images/banner-dark-cyan.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-cyan] .home::before {
-  background-image: url("../images/banner-light-cyan.wbanner-dark-red.webp");
+  background-image: url("../images/banner-light-cyan.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-orange] .home::before {
-  background-image: url("../images/banner-dark-orange.wbanner-dark-red.webp");
+  background-image: url("../images/banner-dark-orange.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-orange] .home::before {
-  background-image: url("../images/banner-light-orange.wbanner-dark-red.webp");
+  background-image: url("../images/banner-light-orange.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-green] .home::before {
-  background-image: url("../images/banner-dark-green.wbanner-dark-red.webp");
+  background-image: url("../images/banner-dark-green.webp");
 }
 
 [theme-mode=theme-mode-dark][theme-color=theme-color-crimson] .home::before {
-  background-image: url("../images/banner-dark-crimson.wbanner-dark-red.webp");
+  background-image: url("../images/banner-dark-crimson.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-crimson] .home::before {
-  background-image: url("../images/banner-light-crimson.wbanner-dark-red.webp");
+  background-image: url("../images/banner-light-crimson.webp");
 }
 
 [theme-mode=theme-mode-light][theme-color=theme-color-green] .home::before {
-  background-image: url("../images/banner-light-green.wbanner-dark-red.webp");
+  background-image: url("../images/banner-light-green.webp");
 }
 
 .home .max-width {
