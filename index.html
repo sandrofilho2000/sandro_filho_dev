@@ -61,7 +61,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://kit.fontawesome.com/17da3499ef.js" crossorigin="anonymous"></script>
-    
+
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -126,6 +126,10 @@
                 <li class="green">
                     <div class="circle"></div>
                     Verde
+                </li>
+                <li class="crimson">
+                    <div class="circle"></div>
+                    Carmesim
                 </li>
             </ul>
         </div>
@@ -245,49 +249,29 @@
         <div class="max-width">
             <h2 class="title">Minhas Habilidades</h2>
             <div class="skills-content">
-                <div class="column left">
-                    <div class="text">Minhas habilidades criativas e experiências.</div>
-                    <p>Atualmente atuo no frontend, porém, também programo em PHP e consigo integrar sistemas à um banco
-                        de dados, como MySQL, Postgre e outros. Minhas linguagens mais desenvolvidas são JavaScript,
-                        Python e SQL. <br>Posso trazer seu site à vida, me mande uma mensagem e coloque seu negócio
-                        online!</p>
+
+                <div class="card ReactJS">
+                    <img src="./assets/images/stacks/react.png" alt="">
                 </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>HTML</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="line html"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>CSS</span>
-                            <span>100%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>JavaScript</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="line js"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>PHP</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="line php"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>MySQL</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="line mysql"></div>
-                    </div>
+
+                <div class="card nodeJS">
+                    <img src="./assets/images/stacks/node.png" alt="">
+                </div>
+
+                <div class="card typeScript">
+                    <img src="./assets/images/stacks/typescript.png" alt="">
+                </div>
+
+                <div class="card vtex">
+                    <img src="./assets/images/stacks/vtex.avif" alt="">
+                </div>
+
+                <div class="card php">
+                    <img src="./assets/images/stacks/php.png" alt="">
+                </div>
+
+                <div class="card mysql">
+                    <img src="./assets/images/stacks/mysql.png" alt="">
                 </div>
             </div>
         </div>
@@ -445,7 +429,18 @@
     </section>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".serv-content .card, .skills .card"), {
+            max: 5,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
 
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".your-element"));
+    </script>
 </body>
 
 </html>
