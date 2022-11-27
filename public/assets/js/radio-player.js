@@ -73,6 +73,7 @@ $(document).ready(function(){
     }
 
     function update_radio_container(obj){
+        console.log(obj)
         var song_name = obj.name
         var song_artist = obj.artist
         var song_cover = obj.cover
@@ -116,7 +117,6 @@ $(document).ready(function(){
 
         update_radio_container(playing_next)
         document.querySelector(".radio_container").classList.remove("paused")
-        update_radio_container()
     }
 
     function radio_play_prev(){
@@ -134,7 +134,6 @@ $(document).ready(function(){
 
         update_radio_container(playing_prev)
         document.querySelector(".radio_container").classList.remove("paused")
-        update_radio_container()
     }
 
     radio_play_init()
@@ -184,10 +183,14 @@ $(document).ready(function(){
     radio_player.addEventListener('ended', (event) => {
         radio_play_next()
         document.querySelector(".radio_container").classList.add("next_song")
-        setInterval(()=>{
+        setTimeout(()=>{
             document.querySelector(".radio_container").classList.remove("next_song")
-        }, 4000)
+        }, 10000)
     });
+
+    radio_player.addEventListener('mouseenter', (event) => {
+        document.querySelector(".radio_container").classList.remove("next_song")
+    })
 
     document.querySelector(".controls .play_pause").addEventListener("click", ()=>{
         if(!radio_player.paused){

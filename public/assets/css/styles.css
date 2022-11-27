@@ -151,6 +151,11 @@ section {
   width: 230px;
 }
 
+.radio_container.next_song .radio_container_text{
+  opacity: 1;
+  margin-left: unset;
+}
+
 .radio_containe.next_song,
 .radio_container:hover .radio_container_text{
   margin-left: unset;
