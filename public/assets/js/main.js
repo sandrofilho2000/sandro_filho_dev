@@ -70,26 +70,15 @@ $(document).ready(function(){
             }
         }
     });
+
     document.querySelector('.toggle').ondblclick = function(){
         this.classList.toggle('active');
         document.querySelector('.navigation').classList.toggle('active')
-      }
+    }
+    
     $( ".navigation" ).draggable();
     $( ".navigation" ).mousedown(function(){
         $( ".navigation" ).css('cursor', '-moz-grabbing')
-    });
-
-    $('form').submit(function(e){
-        var name = document.querySelector('input[name=nome]')
-        var email = document.querySelector('input[name=email]')
-        var subject = document.querySelector('input[name=assunto]')
-        var text = document.querySelector('input[name=textarea]')
-        e.preventDefault();
-
-        $(this).get(0).reset();
-
-        alert('Mensagem Enviada!')
-
     });
 
 
@@ -109,6 +98,7 @@ $(document).ready(function(){
     })
 
     var currTheme = localStorage.getItem("theme-mode")
+
     if(currTheme){
         $("body").attr("theme-mode", `theme-mode-${currTheme}`)
     }else{
@@ -116,25 +106,26 @@ $(document).ready(function(){
     }
 
     $(".theme-color-menu .themes-toggle").click(function(e){
-        var target = $(this).context
+        var target = $(this)[0]
         var currTheme = $("body").attr("theme-mode")
-
+        var theme;
         if(currTheme === "theme-mode-light"){
+            theme = 'dark'
             $("body").attr("theme-mode", "theme-mode-dark")
             target.setAttribute("theme-mode", "dark")
-            localStorage.setItem("theme-mode", "dark")
         }else{
+            theme = 'light'
             $("body").attr("theme-mode", "theme-mode-light")
             target.setAttribute("theme-mode", "light")
-            localStorage.setItem("theme-mode", "light")
         }
+        console.log(theme, localStorage.getItem("theme-mode"))
     })
 
     var currColor = localStorage.getItem("theme-color")
     if(currColor){
         $("body").attr("theme-color", `theme-color-${currColor}`)
     }else{
-        $("body").attr("theme-color", `theme-color-blue`)
+        $("body").attr("theme-color", `theme-color-crimson`)
     }
 
     document.querySelectorAll(".theme-color-menu .colors-list li").forEach(function(item){
