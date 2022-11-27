@@ -98,7 +98,7 @@ $(document).ready(function(){
     })
 
     $(".theme-color-menu li").click(function(e){
-        var target = $(this).context
+        var target = $(this)[0]
         var color = target.getAttribute("class")
 
         $("body").attr("theme-color", `theme-color-${color.trim()}`)

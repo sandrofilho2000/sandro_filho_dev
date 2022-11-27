@@ -762,6 +762,7 @@ aside .themes-wrapper .theme i{
 .teams .carousel .card img {
   -o-object-fit: cover;
      object-fit: cover;
+     min-height: 150px;
   transition: all 0.3s ease;
 }
 
