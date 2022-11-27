@@ -24,4 +24,3 @@ def convert_all(path="images/"):
 if __name__ == "__main__":  
     convert_all()
 
-    public/assets/images
