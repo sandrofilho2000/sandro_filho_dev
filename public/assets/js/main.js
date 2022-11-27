@@ -149,10 +149,10 @@ $(document).ready(function(){
         var message = `
         *${subject}*
 
-        Nome: ${name.trim()}
-        Email: ${email.trim()}
+Nome: ${name.trim()}
+Email: ${email.trim()}
 
-        ${text}
+${text}
         `
         getLinkWhastapp(message)
     })
