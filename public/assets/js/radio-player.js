@@ -115,7 +115,8 @@ $(document).ready(function(){
         radio_player.play()
 
         update_radio_container(playing_next)
-        
+        document.querySelector(".radio_container").classList.remove("paused")
+        update_radio_container()
     }
 
     function radio_play_prev(){
@@ -132,7 +133,8 @@ $(document).ready(function(){
         radio_player.play()
 
         update_radio_container(playing_prev)
-
+        document.querySelector(".radio_container").classList.remove("paused")
+        update_radio_container()
     }
 
     radio_play_init()
