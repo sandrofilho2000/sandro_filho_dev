@@ -1085,7 +1085,7 @@ aside .themes-wrapper .theme i{
 
 .contact .right form .button {
   height: 47px;
-  width: 220px;
+  width: 230px;
 }
 
 .contact .right form .button button {
@@ -1102,8 +1102,17 @@ aside .themes-wrapper .theme i{
   transition: all 0.3s ease;
 }
 
-.contact .right form .button button:hover {
-  color: var(--main-color);
+.contact .right form .button button i{
+  color: white;
+  font-size: 25px;
+  margin-left: 5px;
+  position: relative;
+  bottom: -2px;
+}
+
+.contact .right form .button button:hover,
+.contact .right form .button button:hover i{
+  color: var(--main-color) !important;
   background: none;
 }
 

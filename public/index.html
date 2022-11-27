@@ -44,7 +44,7 @@
     <!--Twitter-->
     <title>Sandro Filho DEV</title>
     <link href="./assets/css/theme.min.css" rel="stylesheet" />
-    <link href="./assets/css/styles.min.css" rel="stylesheet" />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
     <link href="./assets/images/icon.ico" rel="shortcut icon" type="image/x-icon" />
     <script defer src="./assets/js/jquery3.5.1.min.js"></script>
     <script defer src="./assets/js/jquery-ui.min.js"></script>
@@ -416,24 +416,24 @@
                 </div>
                 <div class="column right">
                     <div class="text">Mensagem</div>
-                    <form onsubmit="sendEmail(); reset(); return false">
+                    <form>
                         <div class="fields">
                             <div class="field name">
-                                <input name="nome" id="nome" placeholder="Nome" required="" type="text" />
+                                <input name="name" id="name" placeholder="Nome" required="" type="text" />
                             </div>
                             <div class="field email">
                                 <input name="email" id="email" placeholder="Email" required="" type="email" />
                             </div>
                         </div>
                         <div class="field">
-                            <input name="assunto" id="assunto" placeholder="Assunto" required="" type="text" />
+                            <input name="subject" id="subject" placeholder="Assunto" required="" type="text" />
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" name="textarea" id="textarea" placeholder="Mensagem.." required=""
+                            <textarea cols="30" name="text" id="text" placeholder="Mensagem.." required=""
                                 rows="10"></textarea>
                         </div>
                         <div class="button">
-                            <button role="button" aria-label="Name" type="submit">Enviar Mensagem</button>
+                            <button role="button" aria-label="Name" type="submit">Enviar Mensagem <i class="fa-brands fa-whatsapp"></i></button>
                         </div>
                     </form>
                 </div>
@@ -441,24 +441,8 @@
         </div>
     </section>
 
-    <script defer src="./assets/js/main.min.js"></script>
+    <script defer src="./assets/js/main.js"></script>
     <script defer src="./assets/js/radio-player.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "sandrofilo9898@gmail.com",
-                Password: "password",
-                To: "sandrofilho98@yahoo.com.br",
-                From: "sandrofilo9898@gmail.com",
-                Subject: document.getElementById("#assunto"),
-                Body: document.getElementById("#textare")
-            }).then(
-                message => alert(message)
-            );
-        }
-    </script>
     <script src="./assets/js/vanilla-tilt.min.js"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelectorAll(".serv-content .card, .skills .card"), {

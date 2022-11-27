@@ -133,4 +133,27 @@ $(document).ready(function(){
             item.classList.add("active")
         }
     })
+
+    function getLinkWhastapp(message) {
+        message = window.encodeURIComponent(message)
+        window.open(`https://wa.me/5521984238879?text=${message}`)
+    }
+
+    $("form").submit(function(e){
+        e.preventDefault()
+        var form = e.currentTarget
+        var name = form.name.value
+        var email = form.email.value
+        var subject = form.subject.value
+        var text = form.text.value
+        var message = `
+        *${subject}*
+
+        Nome: ${name.trim()}
+        Email: ${email.trim()}
+
+        ${text}
+        `
+        getLinkWhastapp(message)
+    })
 });
