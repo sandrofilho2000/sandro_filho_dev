@@ -4,7 +4,8 @@
     --txt-color: #455560;
     --txt-white: #fff;
     --main-color: transparent;
-    --second-color: #62b4ff;
+    --second-color: transparent;
+    --second-color-soft: transparent;
     --main-bg-light: #ffffff;
     --second-bg-light: #fafafb;
     --txt-color-light: #455560;
@@ -18,17 +19,29 @@
     --toggle-mleft-dark: unset;
     --toggle-mright-dark: 44%;
     --main-color-blue: #349eff;
+    --main-color-blue-soft: #349eff0c;
     --second-color-blue: #62b4ff;
+    --second-color-soft-blue: #62b4ff0c;
     --main-color-red: #fb0b12;
-    --second-color-red: #ff4a6b;
+    --main-color-red-soft: #fb0b120c;
+    --second-color-red: #d22746;
+    --second-color-soft-red: #ff4a6b0c;
     --main-color-crimson: #dc143c;
-    --second-color-crimson: ;
+    --main-color-crimson-soft: #dc143c0c;
+    --second-color-crimson: #c64d65;
+    --second-color-soft-crimson: #c64d650c;
     --main-color-cyan: #10d4d2;
+    --main-color-cyan-soft: #10d4d20c;
     --second-color-cyan: #2ae9e6;
+    --second-color-soft-cyan: #2ae9e60c;
     --main-color-green: #20b042;
+    --main-color-green-soft: #20b0420c;
     --second-color-green: #4caf50;
+    --second-color-soft-green: #4caf500c;
     --main-color-orange: #fc5214;
+    --main-color-orange-soft: #fc52140c;
     --second-color-orange: #fca11a;
+    --second-color-soft-orange: #fca11a0c;
     --sidebar-width: 300px;
     --border-radius: 15px;
     --topnav-height: 110px;
@@ -55,32 +68,44 @@
 
 [theme-color=theme-color-blue] {
     --main-color: var(--main-color-blue);
+    --main-color-soft: var(--main-color-blue-soft);
     --second-color: var(--second-color-blue);
+    --second-color-soft: var(--second-color-soft-blue);
 }
 
 [theme-color=theme-color-red] {
     --main-color: var(--main-color-red);
+    --main-color-soft: var(--main-color-red-soft);
     --second-color: var(--second-color-red);
+    --second-color-soft: var(--second-color-soft-red);
 }
 
 [theme-color=theme-color-crimson] {
     --main-color: var(--main-color-crimson);
+    --main-color-soft: var(--main-color-crimson-soft);
     --second-color: var(--second-color-crimson);
+    --second-color-soft: var(--second-color-soft-crimson);
 }
 
 [theme-color=theme-color-cyan] {
     --main-color: var(--main-color-cyan);
+    --main-color-soft: var(--main-color-cyan-soft);
     --second-color: var(--second-color-cyan);
+    --second-color-soft: var(--second-color-soft-cyan);
 }
 
 [theme-color=theme-color-green] {
     --main-color: var(--main-color-green);
+    --main-color-soft: var(--main-color-green-soft);
     --second-color: var(--second-color-green);
+    --second-color-soft: var(--second-color-green);
 }
 
 [theme-color=theme-color-orange] {
     --main-color: var(--main-color-orange);
+    --main-color-soft: var(--main-color-orange-soft);
     --second-color: var(--second-color-orange);
+    --second-color-soft: var(--second-color-orange);
 }
 
 

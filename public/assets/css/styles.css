@@ -627,6 +627,106 @@ aside .themes-wrapper .theme i{
   font-family: "Ubuntu", sans-serif;
 }
 
+.home .particles_container{
+  position: absolute;
+  width: 300px;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.home .particles_container .particles {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home .particles_container .particles:nth-of-type(2) {
+  height: 300px;
+  width: 300px;
+}
+
+.home .particles_container .particles:nth-of-type(3) {
+  height: 200px;
+  width: 200px;
+}
+
+.home .particles_container .particles:nth-of-type(4) {
+  height: 100px;
+  width: 100px;
+}
+
+.home .particles_container .particles span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: rotate(calc(36deg * var(--i)));
+}
+
+.home .particles_container .particles span div{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 12.5px 21.7px 12.5px;
+  box-sizing: border-box;
+  animation-delay: calc(-0.25s);
+  transform-origin: 20px;
+  transition: 2s;
+}
+
+.home .particles_container .particles span:nth-of-type(even) div{
+  border-color: transparent transparent var(--main-color) transparent;
+  animation: animate 5s linear infinite;
+}
+.home .particles_container .particles span:nth-of-type(odd) div{
+  border-color: transparent transparent var(--txt-color) transparent;
+  animation: animate-reverse 5s linear infinite;
+}
+
+.home .particles_container:hover .particles span div{
+  transform-origin: 250px;
+}
+
+
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+    border-color: transparent transparent var(--main-color) transparent;
+  }
+  50%{
+    border-color: transparent transparent var(--txt-color) transparent;
+  }
+  100%{
+    transform: rotate(360deg);
+    border-color: transparent transparent var(--main-color) transparent;
+  }
+}
+
+@keyframes animate-reverse{
+  0%{
+    transform: rotate(0deg);
+    border-color: transparent transparent var(--txt-color) transparent;
+  }
+  50%{
+    border-color: transparent transparent var(--main-color) transparent;
+  }
+  100%{
+    transform: rotate(360deg);
+    border-color: transparent transparent var(--txt-color) transparent;
+  }
+}
+
 .home::before {
   content: "";
   position: absolute;
