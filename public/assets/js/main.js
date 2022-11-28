@@ -98,7 +98,7 @@ $(document).ready(function(){
     })
 
     var currTheme = localStorage.getItem("theme-mode")
-    console.log(currTheme)
+
     if(currTheme){
         $("body").attr("theme-mode", `theme-mode-${currTheme}`)
     }else{
@@ -109,7 +109,6 @@ $(document).ready(function(){
         var target = $(this)[0]
         var currTheme = $("body").attr("theme-mode")
         var theme;
-        console.log($("body").attr("theme-mode"))
         if(currTheme == "theme-mode-light"){
             theme = 'dark'
             $("body").attr("theme-mode", "theme-mode-dark")
@@ -120,7 +119,7 @@ $(document).ready(function(){
             target.setAttribute("theme-mode", "light")
         }
         localStorage.setItem("theme-mode", theme)
-        console.log(theme, localStorage.getItem("theme-mode"))
+
     })
 
     var currColor = localStorage.getItem("theme-color")
