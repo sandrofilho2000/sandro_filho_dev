@@ -58,10 +58,55 @@ $(document).ready(function(){
         {
             id: 6,
             index: 6,
-            name: "Beneath The Trees",
+            name: "Beneath the trees",
             artist: "Mell-ø",
             cover: "./assets/images/song_covers/beneath the trees.webp",
             path: "./assets/songs/Beneath The Trees.mp3"
+        }
+        ,
+        {
+            id: 7,
+            index: 7,
+            name: "Flying away",
+            artist: "Elijah Lee",
+            cover: "./assets/images/song_covers/flying away.webp",
+            path: "./assets/songs/Flying Away.mp3"
+        }
+        ,
+        {
+            id: 8,
+            index: 8,
+            name: "Fallen leaves",
+            artist: "Hoogway",
+            cover: "./assets/images/song_covers/fallen leaves.webp",
+            path: "./assets/songs/Fallen leaves.mp3"
+        }
+        ,
+        {
+            id: 9,
+            index: 9,
+            name: "Giant leaves",
+            artist: "T.stratt",
+            cover: "./assets/images/song_covers/Giant leaves.webp",
+            path: "./assets/songs/giant leaves.mp3"
+        }
+        ,
+        {
+            id: 10,
+            index: 10,
+            name: "Memories together",
+            artist: "Lemeria",
+            cover: "./assets/images/song_covers/memories together.webp",
+            path: "./assets/songs/Memories together.mp3"
+        }
+        ,
+        {
+            id: 11,
+            index: 11,
+            name: "Memories",
+            artist: "Lemeria",
+            cover: "./assets/images/song_covers/memories.webp",
+            path: "./assets/songs/Memories.mp3"
         }
 
     ]

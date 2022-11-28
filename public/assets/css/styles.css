@@ -793,6 +793,10 @@ aside .themes-wrapper .theme i{
   margin: auto 0 auto 30px;
 }
 
+.home .home-content{
+  pointer-events: none;
+}
+
 .home .home-content .text-1 {
   font-size: 27px;
 }
@@ -824,6 +828,7 @@ aside .themes-wrapper .theme i{
   border-radius: 6px;
   border: 2px solid var(--main-color);
   transition: all 0.3s ease;
+  pointer-events: initial;
 }
 
 .home .home-content a:hover {
