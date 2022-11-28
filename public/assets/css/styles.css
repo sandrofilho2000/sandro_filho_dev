@@ -623,6 +623,7 @@ aside .themes-wrapper .theme i{
   display: flex;
   height: 100vh;
   position: relative;
+  overflow: hidden;
   color: var(--txt-color);
   font-family: "Ubuntu", sans-serif;
 }
@@ -1392,11 +1393,20 @@ footer span a:hover {
     z-index: 2;
   }
 }
+
+@media (max-width: 1024px){
+  .home .particles_container{
+    left: 50%;
+    opacity: 0.5;
+  }
+}
+
 @media (max-width: 991px) {
   .max-width {
     padding: 0 50px;
   }
 }
+
 @media (max-width: 947px) {
   .menu-btn {
     display: none;
@@ -1461,6 +1471,7 @@ footer span a:hover {
     margin-bottom: 35px;
   }
 }
+
 @media (max-width: 800px) {
   .teams .carousel .card .text {
     font-size: 18px;
@@ -1477,7 +1488,11 @@ footer span a:hover {
     opacity: 1;
   }
 }
+
 @media (max-width: 690px) {
+  .home .particles_container{
+    transform: translateY(-50%) translateX(-50%) scale(0.5);
+  }
   .max-width {
     padding: 0 23px;
   }
