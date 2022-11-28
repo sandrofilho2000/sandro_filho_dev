@@ -87,8 +87,8 @@ $(document).ready(function(){
             index: 9,
             name: "Giant leaves",
             artist: "T.stratt",
-            cover: "./assets/images/song_covers/Giant leaves.webp",
-            path: "./assets/songs/giant leaves.mp3"
+            cover: "./assets/images/song_covers/giant leaves.webp",
+            path: "./assets/songs/Giant leaves.mp3"
         }
         ,
         {
@@ -104,7 +104,7 @@ $(document).ready(function(){
             id: 11,
             index: 11,
             name: "Memories",
-            artist: "Lemeria",
+            artist: "Yora",
             cover: "./assets/images/song_covers/memories.webp",
             path: "./assets/songs/Memories.mp3"
         }
@@ -118,7 +118,6 @@ $(document).ready(function(){
     }
 
     function update_radio_container(obj){
-        console.log(obj)
         var song_name = obj.name
         var song_artist = obj.artist
         var song_cover = obj.cover
