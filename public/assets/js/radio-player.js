@@ -6,7 +6,7 @@ $(document).ready(function(){
             index: 0,
             name: "Ocean",
             artist: "Thaehan",
-            cover: "./assets/images/song_covers/Ocean.webp",
+            cover: "./assets/images/song_covers/ocean.webp",
             path: "./assets/songs/Ocean.mp3"
         }
         ,
@@ -81,23 +81,25 @@ $(document).ready(function(){
             cover: "./assets/images/song_covers/fallen leaves.webp",
             path: "./assets/songs/Fallen leaves.mp3"
         }
+
         ,
         {
             id: 9,
             index: 9,
-            name: "Giant leaves",
-            artist: "T.stratt",
-            cover: "./assets/images/song_covers/giant leaves.webp",
-            path: "./assets/songs/Giant leaves.mp3"
-        }
-        ,
-        {
-            id: 10,
-            index: 10,
             name: "Memories together",
             artist: "Lemeria",
             cover: "./assets/images/song_covers/memories together.webp",
-            path: "./assets/songs/Memories together.mp3"
+            path: "./assets/songs/Memories Together.mp3"
+        }
+        ,
+        
+        {
+            id: 10,
+            index: 10,
+            name: "Giant leaves",
+            artist: "T.stratt",
+            cover: "./assets/images/song_covers/giant leaves.webp",
+            path: "./assets/songs/Giant Leaves.mp3"
         }
         ,
         {
@@ -232,6 +234,15 @@ $(document).ready(function(){
         }, 10000)
     });
 
+    radio_player.addEventListener('pause', (event) => {
+        document.querySelector(".radio_container").classList.add("paused")
+        document.querySelector(".radio_container").classList.remove("playing")
+    });
+
+    radio_player.addEventListener('play', (event) => {
+        document.querySelector(".radio_container").classList.remove("paused")
+    });
+
     radio_player.addEventListener('mouseenter', (event) => {
         document.querySelector(".radio_container").classList.remove("next_song")
     })
@@ -242,16 +253,31 @@ $(document).ready(function(){
         }else{
             radio_player_unpause()
         }
-        document.querySelector(".radio_container").classList.toggle("paused")
+            
     })
 
     document.querySelector(".radio_container").addEventListener("click", (e)=>{
-        if(e.currentTarget.classList.contains("not_played")){
-            e.currentTarget.classList.remove("not_played")
+        if(e.currentTarget.classList.contains("not_playing")){
+            e.currentTarget.classList.remove("not_playing")
             radio_player_unpause()
         }
     })
 
+    document.querySelector(".radio_container").addEventListener("mouseenter", (e)=>{
+        var target = document.querySelector(".radio_container")
+        if(!radio_player.paused){
+            target.classList.remove("playing")
+        }
+    })
+    
+    document.querySelector(".radio_container").addEventListener("mouseleave", (e)=>{
+        var target = document.querySelector(".radio_container")
+        if(!radio_player.paused){
+            target.classList.add("playing")
+        }else{
+            target.classList.add("not_playing")
+        }
+    })
 
     document.querySelector(".next_song").addEventListener("click", ()=>{
         radio_play_next()
@@ -261,5 +287,6 @@ $(document).ready(function(){
         radio_play_prev()
     })
 
+    
     
 })

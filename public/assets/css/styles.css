@@ -78,40 +78,122 @@ section {
   color: var(--txt-color);
 }
 
-.radio_container.not_played:hover{
+
+.radio_container.not_playing:hover{
   width: initial !important;
   min-width: unset !important;
 }
 
-.radio_container.not_played .controls,
-.radio_container.not_played .radio_container_text {
+.radio_container.not_playing .controls,
+.radio_container.not_playing .radio_container_text {
   display: none !important;
 }
 
-.radio_container.not_played .img_play_container,
-.radio_container.not_played .img_play_container img{
+.radio_container.not_playing .img_play_container,
+.radio_container.not_playing .img_play_container img{
   border-radius: 6px !important;
   overflow: hidden;
 }
 
-.radio_container.not_played .first_play{
-  opacity: 1 !important;
-  pointer-events: initial !important;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  justify-content: center !important;
+.radio_container.playing .playing_icon{
+  justify-content: center !important;  
+  animation: showup 2s ease-in 1 forwards;
+  animation-delay: 8s;
+  transition: 0.4s;
+  pointer-events: none;
+  opacity: 0;
 }
 
-.radio_container.not_played .first_play i{
+@keyframes showup{
+  100%{
+    pointer-events: initial;
+    opacity: 1;
+    z-index: 9;
+  }
+}
+
+
+.radio_container.not_playing .playing_icon{
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 100;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.radio_container .playing_icon i{
   font-size: 30px;
   color: var(--main-color);
 }
 
-.radio_container.not_played  .first_play  i:hover{
+
+
+.radio_container.playing .playing_icon .music_waves,
+.radio_container.not_playing .playing_icon i{
+  display: block;
+}
+
+.radio_container.playing .playing_icon i,
+.radio_container.not_playing .playing_icon .music_waves{
+  display: none;
+}
+
+.radio_container.playing .playing_icon .music_waves{
+  height: 40px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.radio_container.playing .playing_icon .music_waves .stroke{
+  display: block;
+  position: relative;
+  background-color: var(--main-color);
+  height: 100%;
+  width: 4px;
+  border-radius: 50px;
+  margin: 0 3px;
+  animation: music_wave 1.8s linear infinite;
+}
+
+@keyframes music_wave{
+  50%{
+    height: 40%;
+  }
+  100%{
+    height: 100%;
+  }
+}
+
+.radio_container.playing .playing_icon .music_waves .stroke:nth-of-type(1),
+.radio_container.playing .playing_icon .music_waves .stroke:nth-of-type(7){
+  animation-delay: 0s;
+}
+
+
+.radio_container.playing .playing_icon .music_waves .stroke:nth-of-type(2),
+.radio_container.playing .playing_icon .music_waves .stroke:nth-of-type(6){
+  animation-delay: 0.3s;
+}
+
+.radio_container.playing .playing_icon .music_waves .stroke:nth-of-type(3),
+.radio_container.playing .playing_icon .music_waves .stroke:nth-of-type(5){
+  animation-delay: 0.6s;
+}
+
+.radio_container.playing .playing_icon .music_waves .stroke:nth-of-type(4){
+  animation-delay: 0.9s;
+}
+
+
+.radio_container.playing .playing_icon .music_waves .stroke:nth-of-type(1){
+  animation-delay: 0s;
+}
+
+.radio_container.not_playing  .playing_icon  i:hover{
   color: white;
 }
+
 
 .radio_container .fa-pause{
   display: block;
@@ -129,6 +211,17 @@ section {
   display: block;
 }
 
+.radio_container.playing .playing_container{
+  opacity: 1 !important;
+  position: absolute;
+  pointer-events: initial !important;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center !important;
+}
+
 .radio_container{
   z-index: 100000;
   width: 70px;
@@ -143,7 +236,7 @@ section {
   transition: 0.5s;
 }
 
-.radio_container .first_play {
+.radio_container .playing_icon {
   display: none;
 }
 
@@ -174,7 +267,8 @@ section {
 }
 
 
-.radio_container.not_played .first_play,
+.radio_container .playing_icon,
+.radio_container .playing_icon,
 .radio_container .img_play_container .controls{
   position: absolute;
   width: 100%;
