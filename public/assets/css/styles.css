@@ -962,6 +962,7 @@ aside .themes-wrapper .theme i{
 
 .about .about-content .right .text {
   font-size: 25px;
+  min-height: 76px;
   font-weight: 600;
   margin-bottom: 10px;
 }
