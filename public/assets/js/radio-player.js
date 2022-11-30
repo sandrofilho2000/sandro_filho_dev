@@ -231,6 +231,7 @@ $(document).ready(function(){
         document.querySelector(".radio_container").classList.add("next_song")
         setTimeout(()=>{
             document.querySelector(".radio_container").classList.remove("next_song")
+            document.querySelector(".radio_container").classList.add("playing")
         }, 10000)
     });
 

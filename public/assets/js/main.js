@@ -14,7 +14,33 @@ $(document).ready(function(){
         }else{
             $('.scroll-up-btn').removeClass("show");
         }
+
+        warning_check_position()
     });
+
+    function close_warning(){
+        $(".warning").removeClass("active")
+        localStorage.setItem("warning_closed", true)
+    }
+
+    function open_warning(){
+        if(localStorage.getItem("warning_closed") !== 'true'){
+            $(".warning").addClass("active")
+            warning_check_position()
+        }
+    }
+
+    function warning_check_position(){
+        if($(".scroll-up-btn").hasClass("show")){
+            $(".warning").addClass("scroll_show")
+        }else{
+            $(".warning").removeClass("scroll_show")
+        }
+    }
+
+    setTimeout(()=>{
+        open_warning()
+    }, 20000)
 
     // slide-up script
     $('.scroll-up-btn').click(function(){
@@ -81,6 +107,19 @@ $(document).ready(function(){
         $( ".navigation" ).css('cursor', '-moz-grabbing')
     });
 
+    $(".navigation").click(function(){
+        open_warning()
+    })
+
+
+    $(".close_warning").click(function(){
+        close_warning()
+    })
+    
+
+    $(".navigation").dblclick(function(){
+        close_warning()
+    })
 
     $(".theme-color-menu .closeMenu, .navbar i").click(function(e){
         $(".theme-color-menu").toggleClass("active")
