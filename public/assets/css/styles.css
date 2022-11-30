@@ -1500,7 +1500,7 @@ aside .themes-wrapper .theme i{
   left: 0;
   opacity: 0.6;
   top: 0;
-  background: var(--main-color);
+  background: var(--second-bg);
 }
 
 .navigation ul li {
@@ -1519,7 +1519,7 @@ aside .themes-wrapper .theme i{
   width: 100%;
   display: flex;
   text-decoration: none;
-  color: white;
+  color: var(--txt-color);
 }
 
 .navigation ul li a .icon {
@@ -1532,7 +1532,7 @@ aside .themes-wrapper .theme i{
 }
 
 .navigation ul li a .icon .fas {
-  color: white;
+  color: var(--txt-color);
   font-size: 24px;
   line-height: 50px;
 }

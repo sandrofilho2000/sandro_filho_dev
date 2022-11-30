@@ -128,7 +128,7 @@ $(document).ready(function(){
     $(".theme-color-menu li").click(function(e){
         var target = $(this)[0]
         var color = target.getAttribute("class")
-
+        color = color.split(" ")[0]
         $("body").attr("theme-color", `theme-color-${color.trim()}`)
         localStorage.setItem("theme-color", color)
 
