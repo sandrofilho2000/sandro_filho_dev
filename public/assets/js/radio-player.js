@@ -1,22 +1,22 @@
 $(document).ready(function(){
 
     var setList = [
+
         {
             id: 0,
             index: 0,
-            name: "Ocean",
-            artist: "Thaehan",
-            cover: "./assets/images/song_covers/ocean.webp",
-            path: "./assets/songs/Ocean.mp3"
-        }
-        ,
-        {
-            id: 1,
-            index: 1,
             name: "Wait for you",
             artist: "Kurt Stewart",
             cover: "./assets/images/song_covers/wait for you.webp",
             path: "./assets/songs/Wait for you.mp3"
+        },
+        {
+            id: 1,
+            index: 1,
+            name: "Ocean",
+            artist: "Thaehan",
+            cover: "./assets/images/song_covers/ocean.webp",
+            path: "./assets/songs/Ocean.mp3"
         }
         ,
         {
@@ -92,23 +92,23 @@ $(document).ready(function(){
             path: "./assets/songs/Memories Together.mp3"
         }
         ,
-        
+
         {
             id: 10,
             index: 10,
-            name: "Giant leaves",
-            artist: "T.stratt",
-            cover: "./assets/images/song_covers/giant leaves.webp",
-            path: "./assets/songs/Giant Leaves.mp3"
+            name: "Memories",
+            artist: "Yora",
+            cover: "./assets/images/song_covers/memories.webp",
+            path: "./assets/songs/Memories.mp3"
         }
         ,
         {
             id: 11,
             index: 11,
-            name: "Memories",
-            artist: "Yora",
-            cover: "./assets/images/song_covers/memories.webp",
-            path: "./assets/songs/Memories.mp3"
+            name: "Giant leaves",
+            artist: "T.stratt",
+            cover: "./assets/images/song_covers/giant leaves.webp",
+            path: "./assets/songs/Giant Leaves.mp3"
         }
 
     ]
@@ -234,6 +234,10 @@ $(document).ready(function(){
             document.querySelector(".radio_container").classList.add("playing")
         }, 10000)
     });
+
+    radio_player.addEventListener('error', (event) => {
+        radio_play_next()
+    })
 
     radio_player.addEventListener('pause', (event) => {
         document.querySelector(".radio_container").classList.add("paused")

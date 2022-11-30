@@ -196,4 +196,8 @@ ${text}
         `
         getLinkWhastapp(message)
     })
+
+    document.querySelector(".img_play_container img").addEventListener("error", function(e){
+        e.target.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcT0gfUfQFnyI5p8HCnWSbLHQhmy_cO80TxudY7E4ZtfoqI93Ky2Dx6FDvjoICrsBAj8&usqp=CAU")
+    })
 });

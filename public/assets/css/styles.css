@@ -281,6 +281,9 @@ section .info span {
   opacity: 1;
   pointer-events: inherit;
 }
+.radio_container .img_play_container img {
+  border-radius: 6px;
+}
 .radio_container .img_play_container .controls i {
   font-size: 14px;
   color: var(--main-color);
