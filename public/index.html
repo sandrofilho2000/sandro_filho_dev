@@ -58,16 +58,19 @@
     <!-- Meta Tags Generated via http://heymeta.com -->
 
     <link href="./assets/css/theme.min.css" rel="stylesheet" />
-    <link href="./assets/css/styles.min.css" rel="stylesheet" />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
     <link href="./assets/images/icon.ico" rel="shortcut icon" type="image/x-icon" />
-    <script defer src="./assets/js/jquery3.5.1.min.js"></script>
-    <script defer src="./assets/js/jquery-ui.min.js"></script>
-    <script defer src="./assets/js/typed.min.js"></script>
-    <script defer src="./assets/js/jquery.waypoints.min.js"></script>
-    <script defer src="./assets/js/owl.carousel.min.js"></script>
-    <script defer crossorigin="anonymous" src="./assets/js/17da3499ef.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        rel="stylesheet" />
+    
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" crossorigin="anonymous">
+
+
+    <script src="./assets/js/jquery3.5.1.min.js"></script>
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <script src="./assets/js/typed.min.js"></script>
+    <script src="./assets/js/jquery.waypoints.min.js"></script>
+    <script crossorigin="anonymous" src="./assets/js/17da3499ef.js"></script>
+
 </head>
 
 <body theme-mode="theme-mode-light">
@@ -196,12 +199,14 @@
     <!-- navbar and logo -->
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">Sandro<span> Filho DEV</span></a></div>
+            <h1>
+                <div class="logo"><a href="#">Sandro<span> Filho DEV</span></a></div>
+            </h1>
         </div>
         <i class="fa-solid fa-palette"></i>
     </nav>
 
-    <!-- draggable menu --> 
+    <!-- draggable menu -->
     <div class="navigation">
         <div class="toggle">
             <ul class="menu">
@@ -221,9 +226,13 @@
                         <span class="icon"><i class="fas fa-paint-brush"></i></span>
                         <span class="title">Habilidades</span>
                     </a></li>
-                <li><a href="#teams">
+                <li><a href="#portfolio">
                         <span class="icon"><i class="fas fa-laptop"></i></span>
                         <span class="title">Portifólio</span>
+                    </a></li>
+                <li><a href="#blog">
+                        <span class="icon"><i class="fa-solid fa-newspaper"></i></span>
+                        <span class="title">Blog</span>
                     </a></li>
                 <li><a href="#contact">
                         <span class="icon"><i class="fas fa-phone"></i></span>
@@ -631,11 +640,11 @@
         </div>
     </section>
 
-    <!-- teams section start -->
-    <section class="teams" id="teams">
+    <!-- portfolio section start -->
+    <section class="portfolio" id="portfolio">
         <div class="max-width">
             <h2 class="title">Portifólio</h2>
-            <div class="carousel owl-carousel">
+            <div class="portfolio-content owl-carousel owl-theme">
                 <div class="card">
                     <div class="box">
                         <img alt="Site Mulheres no Front" title="Site Mulheres no Front" loading="lazy"
@@ -728,7 +737,180 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- blog section start -->
+    <section class="blog" id="blog">
+        <div class="max-width">
+            <h2 class="title">Blog</h2>
+            <div class="blog-content">
+                <div class="main_post">
+                    <div class="card">
+                        <a href="https://tavanoblog.com.br/post/o-que-e-o-tabnews">
+                            <img src="./assets/images/blog/tabnews.webp" alt="">
+                            <div class="text_content">
+                                <div class="text blog_headline">O que é o TabNews? Conheça a nova comunidade de
+                                    Tecnologia
+                                </div>
+                                <p class="content">
+                                    TabNews é uma plataforma em formato de Fóruns para a comunidade de Tecnologia
+                                    compartilhar
+                                    conteúdo de valor, tirar dúvidas e interagirem.
+
+                                    Idealizada pelo desenvolvedor e youtuber: Filipe Deschamps, a plataforma está
+                                    disponível
+                                    em
+                                    TabNews, possui código aberto no GitHub e já conta com mais de 40 contribuidores.
+                                </p>
+                                <div class="blog-cta">
+                                    Leia mais
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="veja_tambem">
+                    <h4>
+                        Veja também
+                    </h4>
+                    <div class="cards_container cards_container_desktop">
+                        <div class="card">
+                            <img src="./assets/images/blog/melhorar_velocidade.webp" alt="">
+                            <div class="text_content">
+                                <div class="text blog_headline">4 Oportunidades para Melhorar a Velocidade do seu
+                                    E-commerce</div>
+                                <p class="content">
+                                    Quando o assunto é performance de websites, as dicas mais comuns são de redução do
+                                    tamanho das imagens e remoção de código não utilizado.
+
+                                    E a verdade é, essas correções são muito importantes, mas você não pode se limitar a
+                                    isso.
+
+                                    Nesse post, vamos trazer 4 táticas para melhorar a velocidade da sua Loja Virtual.
+                                </p>
+                                <div class="blog-cta">
+                                    <a
+                                        href="https://tavanoblog.com.br/post/oportunidades-para-melhorar-a-velocidade-do-seu-ecommerce">
+                                        Ler mais
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="./assets/images/blog/vale_a_pena_react.webp" alt="">
+                            <div class="text_content">
+                                <div class="text blog_headline">Vale a pena criar um blog com React?</div>
+                                <p class="content">
+                                    Sim, é totalmente possível que um blog em React tenha resultados muito bons, mas
+                                    você precisa tomar muito cuidado durante o desenvolvimento.
+
+                                    React é uma biblioteca Javascript que faz toda a renderização da página no
+                                    Client
+                                    Side e isso é muito perigoso para um blog.
+                                </p>
+                                <div class="blog-cta">
+                                    <a
+                                        href="https://tavanoblog.com.br/post/oportunidades-para-melhorar-a-velocidade-do-seu-ecommerce">
+                                        Ler mais
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="./assets/images/blog/desenvolvedor vtex.webp" alt="">
+                            <div class="text_content">
+                                <div class="text blog_headline">O que é "Desenvolvedor VTEX" ?</div>
+                                <p class="content">
+                                    Profissionais de tecnologia que trabalham diretamente com as tecnologias da
+                                    VTEX,
+                                    podem ser considerados "Desenvolvedores VTEX".
+
+                                    Esse termo é muito usado nas vagas pelas agências, para encontrar pessoas que já
+                                    tem
+                                    experiência com a plataforma.
+                                </p>
+                                <div class="blog-cta">
+                                    <a
+                                        href="https://tavanoblog.com.br/post/oportunidades-para-melhorar-a-velocidade-do-seu-ecommerce">
+                                        Ler mais
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards_container cards_container_mobile owl-carousel owl-theme">
+                        <div class="card">
+                            <img src="./assets/images/blog/melhorar_velocidade.webp" alt="">
+                            <div class="text_content">
+                                <div class="text blog_headline">4 Oportunidades para Melhorar a Velocidade do seu
+                                    E-commerce</div>
+                                <p class="content">
+                                    Quando o assunto é performance de websites, as dicas mais comuns são de redução do
+                                    tamanho das imagens e remoção de código não utilizado.
+
+                                    E a verdade é, essas correções são muito importantes, mas você não pode se limitar a
+                                    isso.
+
+                                    Nesse post, vamos trazer 4 táticas para melhorar a velocidade da sua Loja Virtual.
+                                </p>
+                                <div class="blog-cta">
+                                    <a
+                                        href="https://tavanoblog.com.br/post/oportunidades-para-melhorar-a-velocidade-do-seu-ecommerce">
+                                        Ler mais
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="./assets/images/blog/vale_a_pena_react.webp" alt="">
+                            <div class="text_content">
+                                <div class="text blog_headline">Vale a pena criar um blog com React?</div>
+                                <p class="content">
+                                    Sim, é totalmente possível que um blog em React tenha resultados muito bons, mas
+                                    você precisa tomar muito cuidado durante o desenvolvimento.
+
+                                    React é uma biblioteca Javascript que faz toda a renderização da página no
+                                    Client
+                                    Side e isso é muito perigoso para um blog.
+                                </p>
+                                <div class="blog-cta">
+                                    <a
+                                        href="https://tavanoblog.com.br/post/oportunidades-para-melhorar-a-velocidade-do-seu-ecommerce">
+                                        Ler mais
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="./assets/images/blog/desenvolvedor vtex.webp" alt="">
+                            <div class="text_content">
+                                <div class="text blog_headline">O que é "Desenvolvedor VTEX" ?</div>
+                                <p class="content">
+                                    Profissionais de tecnologia que trabalham diretamente com as tecnologias da
+                                    VTEX,
+                                    podem ser considerados "Desenvolvedores VTEX".
+
+                                    Esse termo é muito usado nas vagas pelas agências, para encontrar pessoas que já
+                                    tem
+                                    experiência com a plataforma.
+                                </p>
+                                <div class="blog-cta">
+                                    <a
+                                        href="https://tavanoblog.com.br/post/oportunidades-para-melhorar-a-velocidade-do-seu-ecommerce">
+                                        Ler mais
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- contact section start -->
     <section class="contact" id="contact">
         <div class="max-width">
@@ -806,8 +988,8 @@
         </div>
     </section>
 
-    <script defer src="./assets/js/main.min.js"></script>
-    <script defer src="./assets/js/radio-player.min.js?v=80"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/radio-player.min.js?v=100"></script>
     <script src="./assets/js/vanilla-tilt.min.js"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelectorAll(".serv-content .card, .skills .card"), {
@@ -818,8 +1000,8 @@
         });
 
         //It also supports NodeList
-        VanillaTilt.init(document.querySelectorAll(".your-element"));
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>

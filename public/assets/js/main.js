@@ -1,61 +1,61 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         // sticky navbar on scroll script
-        if(this.scrollY > 20){
+        if (this.scrollY > 20) {
             $('.navbar').addClass("sticky");
-        }else{
+        } else {
             $('.navbar').removeClass("sticky");
         }
-        
+
         // scroll-up button show/hide script
-        if(this.scrollY > 500){
+        if (this.scrollY > 500) {
             $('.scroll-up-btn').addClass("show");
-        }else{
+        } else {
             $('.scroll-up-btn').removeClass("show");
         }
 
         warning_check_position()
     });
 
-    function close_warning(){
+    function close_warning() {
         $(".warning").removeClass("active")
         localStorage.setItem("warning_closed", true)
     }
 
-    function open_warning(){
-        if(localStorage.getItem("warning_closed") !== 'true'){
+    function open_warning() {
+        if (localStorage.getItem("warning_closed") !== 'true') {
             $(".warning").addClass("active")
             warning_check_position()
         }
     }
 
-    function warning_check_position(){
-        if($(".scroll-up-btn").hasClass("show")){
+    function warning_check_position() {
+        if ($(".scroll-up-btn").hasClass("show")) {
             $(".warning").addClass("scroll_show")
-        }else{
+        } else {
             $(".warning").removeClass("scroll_show")
         }
     }
 
-    setTimeout(()=>{
+    setTimeout(() => {
         open_warning()
     }, 20000)
 
     // slide-up script
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
+    $('.scroll-up-btn').click(function () {
+        $('html').animate({ scrollTop: 0 });
         // removing smooth scroll on slide-up button click
         $('html').css("scrollBehavior", "auto");
     });
 
-    $('.navbar .menu li a').click(function(){
+    $('.navbar .menu li a').click(function () {
         // applying again smooth scroll on menu items click
         $('html').css("scrollBehavior", "smooth");
     });
 
     // toggle menu/navbar script
-    $('.menu-btn').click(function(){
+    $('.menu-btn').click(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
@@ -75,57 +75,68 @@ $(document).ready(function(){
         loop: true
     });
 
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
+
+    $('.portfolio-content.owl-carousel').owlCarousel({
+        margin:10,
+        nav:true,
+        responsive:{
             0:{
-                items: 1,
-                nav: false
+                items:1
             },
             600:{
-                items: 2,
-                nav: false
+                items:2
             },
             1000:{
-                items: 3,
-                nav: false
+                items:3
             }
         }
-    });
+    })
 
-    document.querySelector('.toggle').ondblclick = function(){
+    $('.cards_container_mobile.owl-carousel').owlCarousel({
+        margin:10,
+        dots: true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            520:{
+                items:2,
+            },
+            800:{
+                items:3,
+            }
+        }
+    })
+
+    document.querySelector('.toggle').ondblclick = function () {
         this.classList.toggle('active');
         document.querySelector('.navigation').classList.toggle('active')
     }
-    
-    $( ".navigation" ).draggable();
-    $( ".navigation" ).mousedown(function(){
-        $( ".navigation" ).css('cursor', '-moz-grabbing')
+
+    $(".navigation").draggable();
+    $(".navigation").mousedown(function () {
+        $(".navigation").css('cursor', '-moz-grabbing')
     });
 
-    $(".navigation").click(function(){
+    $(".navigation").click(function () {
         open_warning()
     })
 
 
-    $(".close_warning").click(function(){
-        close_warning()
-    })
-    
-
-    $(".navigation").dblclick(function(){
+    $(".close_warning").click(function () {
         close_warning()
     })
 
-    $(".theme-color-menu .closeMenu, .navbar i").click(function(e){
+
+    $(".navigation").dblclick(function () {
+        close_warning()
+    })
+
+    $(".theme-color-menu .closeMenu, .navbar i").click(function (e) {
         $(".theme-color-menu").toggleClass("active")
     })
 
-    $(".theme-color-menu li").click(function(e){
+    $(".theme-color-menu li").click(function (e) {
         var target = $(this)[0]
         var color = target.getAttribute("class")
         color = color.split(" ")[0]
@@ -138,21 +149,21 @@ $(document).ready(function(){
 
     var currTheme = localStorage.getItem("theme-mode")
 
-    if(currTheme){
+    if (currTheme) {
         $("body").attr("theme-mode", `theme-mode-${currTheme}`)
-    }else{
+    } else {
         $("body").attr("theme-mode", `theme-mode-light`)
     }
 
-    $(".theme-color-menu .themes-toggle").click(function(e){
+    $(".theme-color-menu .themes-toggle").click(function (e) {
         var target = $(this)[0]
         var currTheme = $("body").attr("theme-mode")
         var theme;
-        if(currTheme == "theme-mode-light"){
+        if (currTheme == "theme-mode-light") {
             theme = 'dark'
             $("body").attr("theme-mode", "theme-mode-dark")
             target.setAttribute("theme-mode", "dark")
-        }else{
+        } else {
             theme = 'light'
             $("body").attr("theme-mode", "theme-mode-light")
             target.setAttribute("theme-mode", "light")
@@ -162,14 +173,14 @@ $(document).ready(function(){
     })
 
     var currColor = localStorage.getItem("theme-color")
-    if(currColor){
+    if (currColor) {
         $("body").attr("theme-color", `theme-color-${currColor}`)
-    }else{
+    } else {
         $("body").attr("theme-color", `theme-color-crimson`)
     }
 
-    document.querySelectorAll(".theme-color-menu .colors-list li").forEach(function(item){
-        if(item.classList.contains(currColor)){
+    document.querySelectorAll(".theme-color-menu .colors-list li").forEach(function (item) {
+        if (item.classList.contains(currColor)) {
             item.classList.add("active")
         }
     })
@@ -179,7 +190,7 @@ $(document).ready(function(){
         window.open(`https://wa.me/5521984238879?text=${message}`)
     }
 
-    $("form").submit(function(e){
+    $("form").submit(function (e) {
         e.preventDefault()
         var form = e.currentTarget
         var name = form.name.value
@@ -197,7 +208,7 @@ ${text}
         getLinkWhastapp(message)
     })
 
-    document.querySelector(".img_play_container img").addEventListener("error", function(e){
+    document.querySelector(".img_play_container img").addEventListener("error", function (e) {
         e.target.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcT0gfUfQFnyI5p8HCnWSbLHQhmy_cO80TxudY7E4ZtfoqI93Ky2Dx6FDvjoICrsBAj8&usqp=CAU")
     })
 });
