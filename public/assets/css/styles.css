@@ -1439,8 +1439,8 @@ aside.theme-color-menu .colors-wrapper .colors-list li.crimson div {
   left: 0;
   width: 50px;
   height: 50px;
-  transition: width 0.5s, height 0.5s;
-  transition-delay: 0s, 0.75s;
+  transition: width 0.35s, height 0.35s;
+  transition-delay: 0s, 0.55s;
   z-index: 99999;
   border-radius: 4px;
   overflow: hidden;
@@ -1462,7 +1462,7 @@ aside.theme-color-menu .colors-wrapper .colors-list li.crimson div {
   justify-content: flex-end;
   align-items: center;
   background-color: var(--main-color);
-  transition: 0.5s;
+  transition: 0.35s;
   cursor: -webkit-grab;
   cursor: grab;
 }
